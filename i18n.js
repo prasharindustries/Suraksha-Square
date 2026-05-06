@@ -21,7 +21,7 @@ const translations = {
         activeAlerts: "Active Alerts in Your Area",
         
         // How It Works
-        howItWorks: "How SurakshaSetu Works",
+        howItWorks: "How सुरक्षा Square Works",
         step1Title: "Report",
         step1Desc: "Share scam calls, fake messages, or suspicious links anonymously",
         step2Title: "Verify",
@@ -127,7 +127,7 @@ const translations = {
         rememberText: "No government agency will ever ask for OTP, password, or payment over phone. If someone does — it's a scam.",
         
         // Footer
-        footerText: "🇮🇳 SurakshaSetu — Securing India, One Report at a Time",
+        footerText: "🇮🇳 सुरक्षा Square — Securing India, One Report at a Time",
         disclaimer: "This is a community platform. Always report serious crimes to local police."
     },
     
@@ -151,7 +151,7 @@ const translations = {
         activeAlerts: "आपके क्षेत्र में सक्रिय अलर्ट",
         
         // How It Works
-        howItWorks: "कैसे काम करता है SurakshaSetu",
+        howItWorks: "कैसे काम करता है सुरक्षा Square",
         step1Title: "रिपोर्ट करें",
         step1Desc: "स्कैम कॉल, फर्जी संदेश या संदिग्ध लिंक साझा करें",
         step2Title: "जांच करें",
@@ -257,7 +257,7 @@ const translations = {
         rememberText: "कोई भी सरकारी एजेंसी कभी भी फोन पर OTP, पासवर्ड या भुगतान नहीं मांगती। यदि कोई मांगता है — यह स्कैम है।",
         
         // Footer
-        footerText: "🇮🇳 सुरक्षासेतु — एक रिपोर्ट के साथ भारत को सुरक्षित बनाना",
+        footerText: "🇮🇳 सुरक्षा Square — एक रिपोर्ट के साथ भारत को सुरक्षित बनाना",
         disclaimer: "यह एक सामुदायिक मंच है। गंभीर अपराधों की हमेशा स्थानीय पुलिस को रिपोर्ट करें।"
     }
 };
