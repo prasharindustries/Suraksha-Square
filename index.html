@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>SurakshaSetu — Cyber Incident Reporting</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">SurakshaSetu</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="report.html">Report</a>
+                <a href="tracker.html">Tracker</a>
+                <a href="awareness.html">Awareness</a>
+                <a href="resources.html">Resources</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Stop Cyber Crime Before It's Too Late</h1>
+                <p class="hero-subtitle">Report suspicious calls, messages, or scams instantly. Join thousands of Indians protecting their community.</p>
+                <div class="hero-buttons">
+                    <a href="report.html" class="btn btn-primary">🚨 Report an Incident</a>
+                    <a href="tracker.html" class="btn btn-secondary">📊 View Local Incidents</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stat-cards">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalReports">0</div>
+                        <div class="stat-label">Total Reports</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="todayReports">0</div>
+                        <div class="stat-label">Reports Today</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="activeAlerts">0</div>
+                        <div class="stat-label">Active Alerts in Your Area</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How SurakshaSetu Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Report</h3>
+                        <p>Share scam calls, fake messages, or suspicious links anonymously</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Verify</h3>
+                        <p>Our community + AI flags patterns across your locality</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Alert</h3>
+                        <p>Neighbors get real-time warnings of active scams in their pincode</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-alerts">
+            <div class="container">
+                <h2 class="section-title">Recent Alerts in Your Area</h2>
+                <div id="recentAlertsList" class="alerts-list">
+                    <p class="loading">Loading incidents near you...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="emergency">
+            <div class="container">
+                <div class="emergency-box">
+                    <h2>🚨 Immediate Help</h2>
+                    <p>If you're losing money or personal information right now:</p>
+                    <div class="emergency-numbers">
+                        <div class="emergency-number">
+                            <span class="number">1930</span>
+                            <span class="label">Cyber Crime Helpline</span>
+                        </div>
+                        <div class="emergency-number">
+                            <span class="number">112</span>
+                            <span class="label">Police Emergency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>🇮🇳 SurakshaSetu — Securing India, One Report at a Time</p>
+            <p class="disclaimer">This is a community platform. Always report serious crimes to local police.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
