@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>SurakshaSetu — Cyber Incident Reporting</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -15,11 +15,15 @@
                 <span class="logo-text">SurakshaSetu</span>
             </div>
             <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="report.html">Report</a>
-                <a href="tracker.html">Tracker</a>
-                <a href="awareness.html">Awareness</a>
-                <a href="resources.html">Resources</a>
+                <a href="index.html" class="active" data-key="navHome">Home</a>
+                <a href="report.html" data-key="navReport">Report</a>
+                <a href="tracker.html" data-key="navTracker">Tracker</a>
+                <a href="awareness.html" data-key="navAwareness">Awareness</a>
+                <a href="resources.html" data-key="navResources">Resources</a>
+            </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="hi">हिंदी</button>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </div>
@@ -28,11 +32,11 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1 class="hero-title">Stop Cyber Crime Before It's Too Late</h1>
-                <p class="hero-subtitle">Report suspicious calls, messages, or scams instantly. Join thousands of Indians protecting their community.</p>
+                <h1 class="hero-title" data-key="heroTitle">Stop Cyber Crime Before It's Too Late</h1>
+                <p class="hero-subtitle" data-key="heroSubtitle">Report suspicious calls, messages, or scams instantly. Join thousands of Indians protecting their community.</p>
                 <div class="hero-buttons">
-                    <a href="report.html" class="btn btn-primary">🚨 Report an Incident</a>
-                    <a href="tracker.html" class="btn btn-secondary">📊 View Local Incidents</a>
+                    <a href="report.html" class="btn btn-primary" data-key="reportBtn">🚨 Report an Incident</a>
+                    <a href="tracker.html" class="btn btn-secondary" data-key="trackerBtn">📊 View Local Incidents</a>
                 </div>
             </div>
         </section>
@@ -42,15 +46,15 @@
                 <div class="stat-cards">
                     <div class="stat-card">
                         <div class="stat-number" id="totalReports">0</div>
-                        <div class="stat-label">Total Reports</div>
+                        <div class="stat-label" data-key="totalReports">Total Reports</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number" id="todayReports">0</div>
-                        <div class="stat-label">Reports Today</div>
+                        <div class="stat-label" data-key="todayReports">Reports Today</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number" id="activeAlerts">0</div>
-                        <div class="stat-label">Active Alerts in Your Area</div>
+                        <div class="stat-label" data-key="activeAlerts">Active Alerts in Your Area</div>
                     </div>
                 </div>
             </div>
@@ -58,22 +62,22 @@
 
         <section class="how-it-works">
             <div class="container">
-                <h2 class="section-title">How SurakshaSetu Works</h2>
+                <h2 class="section-title" data-key="howItWorks">How SurakshaSetu Works</h2>
                 <div class="steps">
                     <div class="step">
                         <div class="step-number">1</div>
-                        <h3>Report</h3>
-                        <p>Share scam calls, fake messages, or suspicious links anonymously</p>
+                        <h3 data-key="step1Title">Report</h3>
+                        <p data-key="step1Desc">Share scam calls, fake messages, or suspicious links anonymously</p>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
-                        <h3>Verify</h3>
-                        <p>Our community + AI flags patterns across your locality</p>
+                        <h3 data-key="step2Title">Verify</h3>
+                        <p data-key="step2Desc">Our community + AI flags patterns across your locality</p>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
-                        <h3>Alert</h3>
-                        <p>Neighbors get real-time warnings of active scams in their pincode</p>
+                        <h3 data-key="step3Title">Alert</h3>
+                        <p data-key="step3Desc">Neighbors get real-time warnings of active scams in their pincode</p>
                     </div>
                 </div>
             </div>
@@ -81,9 +85,9 @@
 
         <section class="recent-alerts">
             <div class="container">
-                <h2 class="section-title">Recent Alerts in Your Area</h2>
+                <h2 class="section-title" data-key="recentAlerts">Recent Alerts in Your Area</h2>
                 <div id="recentAlertsList" class="alerts-list">
-                    <p class="loading">Loading incidents near you...</p>
+                    <p class="loading" data-key="loading">Loading incidents near you...</p>
                 </div>
             </div>
         </section>
@@ -91,16 +95,16 @@
         <section class="emergency">
             <div class="container">
                 <div class="emergency-box">
-                    <h2>🚨 Immediate Help</h2>
-                    <p>If you're losing money or personal information right now:</p>
+                    <h2 data-key="emergencyTitle">🚨 Immediate Help</h2>
+                    <p data-key="emergencyText">If you're losing money or personal information right now:</p>
                     <div class="emergency-numbers">
                         <div class="emergency-number">
                             <span class="number">1930</span>
-                            <span class="label">Cyber Crime Helpline</span>
+                            <span class="label" data-key="helpline1">Cyber Crime Helpline</span>
                         </div>
                         <div class="emergency-number">
                             <span class="number">112</span>
-                            <span class="label">Police Emergency</span>
+                            <span class="label" data-key="helpline2">Police Emergency</span>
                         </div>
                     </div>
                 </div>
@@ -110,11 +114,12 @@
 
     <footer>
         <div class="container">
-            <p>🇮🇳 SurakshaSetu — Securing India, One Report at a Time</p>
-            <p class="disclaimer">This is a community platform. Always report serious crimes to local police.</p>
+            <p data-key="footerText">🇮🇳 SurakshaSetu — Securing India, One Report at a Time</p>
+            <p class="disclaimer" data-key="disclaimer">This is a community platform. Always report serious crimes to local police.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="i18n.js"></script>
 </body>
 </html>
