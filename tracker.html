@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Tracker — SurakshaSetu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">SurakshaSetu</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="report.html">Report</a>
+                <a href="tracker.html" class="active">Tracker</a>
+                <a href="awareness.html">Awareness</a>
+                <a href="resources.html">Resources</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title" style="margin-top: 40px;">📊 Live Incident Tracker</h1>
+            
+            <div class="map-container" id="mapContainer">
+                📍 Live map view (community-reported incidents)
+                <br><small>Upgraded version would show exact scam hotspots in your city</small>
+            </div>
+            
+            <div class="filter-bar" style="margin: 20px 0; display: flex; gap: 10px; flex-wrap: wrap;">
+                <select id="filterType" style="padding: 8px; border-radius: 8px;">
+                    <option value="all">All Incidents</option>
+                    <option value="scam-call">Scam Calls</option>
+                    <option value="phishing">Phishing Links</option>
+                    <option value="upi-fraud">UPI Fraud</option>
+                    <option value="sim-swap">SIM Swap</option>
+                </select>
+                <input type="text" id="searchPincode" placeholder="Filter by pincode" style="padding: 8px; border-radius: 8px; width: 150px;">
+                <button id="applyFilter" class="btn btn-secondary" style="padding: 8px 16px;">Apply</button>
+            </div>
+            
+            <div id="allIncidentsList" class="alerts-list">
+                <p>Loading incidents...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>🇮🇳 SurakshaSetu — Securing India, One Report at a Time</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
