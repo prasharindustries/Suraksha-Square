@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Report Incident — SurakshaSetu</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -15,11 +15,15 @@
                 <span class="logo-text">SurakshaSetu</span>
             </div>
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="report.html" class="active">Report</a>
-                <a href="tracker.html">Tracker</a>
-                <a href="awareness.html">Awareness</a>
-                <a href="resources.html">Resources</a>
+                <a href="index.html" data-key="navHome">Home</a>
+                <a href="report.html" class="active" data-key="navReport">Report</a>
+                <a href="tracker.html" data-key="navTracker">Tracker</a>
+                <a href="awareness.html" data-key="navAwareness">Awareness</a>
+                <a href="resources.html" data-key="navResources">Resources</a>
+            </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="hi">हिंदी</button>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </div>
@@ -28,55 +32,55 @@
     <main>
         <div class="container">
             <div class="form-container">
-                <h1>Report a Cyber Incident</h1>
-                <p>Your report helps warn others in your area. You can report anonymously.</p>
+                <h1 data-key="reportIncident">Report a Cyber Incident</h1>
+                <p data-key="reportDesc">Your report helps warn others in your area. You can report anonymously.</p>
                 
                 <form id="incidentForm">
                     <div class="form-group">
-                        <label>Type of Incident *</label>
+                        <label data-key="incidentType">Type of Incident *</label>
                         <select id="incidentType" required>
-                            <option value="">Select type...</option>
-                            <option value="scam-call">📞 Scam Call</option>
-                            <option value="phishing">🔗 Phishing Link / SMS</option>
-                            <option value="upi-fraud">💳 UPI / Payment Fraud</option>
-                            <option value="sim-swap">📱 SIM Swap Attempt</option>
-                            <option value="other">⚠️ Other Scam</option>
+                            <option value="" data-key="selectType">Select type...</option>
+                            <option value="scam-call" data-key="scamCall">📞 Scam Call</option>
+                            <option value="phishing" data-key="phishing">🔗 Phishing Link / SMS</option>
+                            <option value="upi-fraud" data-key="upiFraud">💳 UPI / Payment Fraud</option>
+                            <option value="sim-swap" data-key="simSwap">📱 SIM Swap Attempt</option>
+                            <option value="other" data-key="other">⚠️ Other Scam</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label>Description *</label>
-                        <textarea id="description" placeholder="Describe what happened — include script, demands, lies they told..." required></textarea>
+                        <label data-key="description">Description *</label>
+                        <textarea id="description" data-placeholder-key="descriptionPlaceholder" placeholder="Describe what happened — include script, demands, lies they told..." required></textarea>
                     </div>
                     
                     <div class="form-group">
-                        <label>Scammer Phone Number (if known)</label>
+                        <label data-key="phoneNumber">Scammer Phone Number (if known)</label>
                         <input type="tel" id="phoneNumber" placeholder="e.g., +91 XXXXXXXXXX">
                     </div>
                     
                     <div class="form-group">
-                        <label>Suspicious Link (if any)</label>
+                        <label data-key="link">Suspicious Link (if any)</label>
                         <input type="url" id="link" placeholder="https://...">
                     </div>
                     
                     <div class="form-group">
-                        <label>Your Pincode *</label>
-                        <input type="text" id="pincode" placeholder="e.g., 110001" pattern="[0-9]{6}" required>
-                        <small>Only used to show local alerts — never shared publicly</small>
+                        <label data-key="pincode">Your Pincode *</label>
+                        <input type="text" id="pincode" data-placeholder-key="pincodePlaceholder" placeholder="e.g., 110001" pattern="[0-9]{6}" required>
+                        <small data-key="pincodeNote">Only used to show local alerts — never shared publicly</small>
                     </div>
                     
                     <div class="form-group">
                         <label>
                             <input type="checkbox" id="anonymous" checked>
-                            Report anonymously (no name/email stored)
+                            <span data-key="anonymous">Report anonymously (no name/email stored)</span>
                         </label>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">🚨 Submit Report</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;" data-key="submitBtn">🚨 Submit Report</button>
                 </form>
                 
                 <div class="emergency-note" style="margin-top: 20px; padding: 15px; background: #fef3c7; border-radius: 8px;">
-                    <strong>⚠️ If you have lost money:</strong> Call <strong>1930</strong> (Cyber Crime Helpline) immediately.
+                    <strong data-key="lostMoneyNote">⚠️ If you have lost money:</strong> <span data-key="lostMoneyText">Call 1930 (Cyber Crime Helpline) immediately.</span>
                 </div>
             </div>
         </div>
@@ -84,102 +88,20 @@
 
     <footer>
         <div class="container">
-            <p>🇮🇳 SurakshaSetu — Securing India, One Report at a Time</p>
+            <p data-key="footerText">🇮🇳 SurakshaSetu — Securing India, One Report at a Time</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Report Incident — SurakshaSetu</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <span class="logo-icon">🛡️</span>
-                <span class="logo-text">SurakshaSetu</span>
-            </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="report.html" class="active">Report</a>
-                <a href="tracker.html">Tracker</a>
-                <a href="awareness.html">Awareness</a>
-                <a href="resources.html">Resources</a>
-            </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-        </div>
-    </nav>
-
-    <main>
-        <div class="container">
-            <div class="form-container">
-                <h1>Report a Cyber Incident</h1>
-                <p>Your report helps warn others in your area. You can report anonymously.</p>
-                
-                <form id="incidentForm">
-                    <div class="form-group">
-                        <label>Type of Incident *</label>
-                        <select id="incidentType" required>
-                            <option value="">Select type...</option>
-                            <option value="scam-call">📞 Scam Call</option>
-                            <option value="phishing">🔗 Phishing Link / SMS</option>
-                            <option value="upi-fraud">💳 UPI / Payment Fraud</option>
-                            <option value="sim-swap">📱 SIM Swap Attempt</option>
-                            <option value="other">⚠️ Other Scam</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Description *</label>
-                        <textarea id="description" placeholder="Describe what happened — include script, demands, lies they told..." required></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Scammer Phone Number (if known)</label>
-                        <input type="tel" id="phoneNumber" placeholder="e.g., +91 XXXXXXXXXX">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Suspicious Link (if any)</label>
-                        <input type="url" id="link" placeholder="https://...">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Your Pincode *</label>
-                        <input type="text" id="pincode" placeholder="e.g., 110001" pattern="[0-9]{6}" required>
-                        <small>Only used to show local alerts — never shared publicly</small>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox" id="anonymous" checked>
-                            Report anonymously (no name/email stored)
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">🚨 Submit Report</button>
-                </form>
-                
-                <div class="emergency-note" style="margin-top: 20px; padding: 15px; background: #fef3c7; border-radius: 8px;">
-                    <strong>⚠️ If you have lost money:</strong> Call <strong>1930</strong> (Cyber Crime Helpline) immediately.
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>🇮🇳 SurakshaSetu — Securing India, One Report at a Time</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="i18n.js"></script>
+    <script>
+        // Override form submission to work with translations
+        const originalHandleSubmit = handleReportSubmit;
+        if (originalHandleSubmit) {
+            window.handleReportSubmit = function(e) {
+                originalHandleSubmit(e);
+            };
+        }
+    </script>
 </body>
 </html>
